@@ -12,7 +12,7 @@ const App: React.FC = () => {
   const [isConfigOpen, setIsConfigOpen] = useState(false);
   const [letterData, setLetterData] = useState<LetterData>({
     sender: "Người gửi thầm lặng",
-    recipient: "Bạn",
+    recipient: "Phúc",
     title: "Cảm ơn bạn vì tất cả",
     message: "Chào bạn, đây là một lá thư nhỏ tớ muốn gửi đến bạn. Cảm ơn bạn đã luôn ở bên cạnh, lắng nghe và sẻ chia. Sự hiện diện của bạn là một món quà vô giá đối với tớ.",
     additionalContent: "Hy vọng ngày hôm nay của bạn thật tuyệt vời và tràn ngập niềm vui!",
@@ -77,17 +77,20 @@ const App: React.FC = () => {
               isOpen={appState === AppState.OPENING} 
               onOpen={handleOpen} 
               recipient={letterData.recipient}
-            />
+                      />
 
-            <div className="mt-12 flex gap-4">
-              <button
-                onClick={() => setIsConfigOpen(true)}
-                className="flex items-center gap-2 px-6 py-2 bg-white text-pink-500 rounded-full shadow-md hover:shadow-lg transition-all border border-pink-100 hover:bg-pink-50"
-              >
-                <Settings2 size={18} />
-                <span>Chỉnh sửa nội dung</span>
-              </button>
-            </div>
+                       {/*an nut*/}
+
+            {/*          <div className="mt-12 flex gap-4">*/}
+
+            {/*  <button*/}
+            {/*    onClick={() => setIsConfigOpen(true)}*/}
+            {/*    className="flex items-center gap-2 px-6 py-2 bg-white text-pink-500 rounded-full shadow-md hover:shadow-lg transition-all border border-pink-100 hover:bg-pink-50"*/}
+            {/*  >*/}
+            {/*    <Settings2 size={18} />*/}
+            {/*    <span>Chỉnh sửa nội dung</span>*/}
+            {/*  </button>*/}
+            {/*</div>*/}
           </motion.div>
         ) : (
           <motion.div
